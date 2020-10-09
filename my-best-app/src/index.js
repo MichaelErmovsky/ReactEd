@@ -3,10 +3,8 @@ import ReactDOM from 'react-dom';
 import Test from './Test.js';
 
 ReactDOM.render(
-    <React.StrictMode >
-      <Test / >
-    </React.StrictMode>,
-    document.getElementById('root')
+    <Test />,
+  document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
