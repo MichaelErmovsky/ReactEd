@@ -5,17 +5,16 @@ class App extends React.Component{
         super(props);
 
         this.state = {
-            textField: "Vadim",
-            renderComponent: true
+            myName: "Vadim"
         };
     }
 
     render() {
-        const textField = this.state.textField;
+        const myName = this.state.myName;
 
         return (
             <div>
-                {textField}
+                {myName}
             </div>
         );
     };
