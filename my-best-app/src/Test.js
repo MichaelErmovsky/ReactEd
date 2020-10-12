@@ -1,9 +1,23 @@
 import React from 'react';
 
-const myconst = () => {
-    return ( <
-        span > Vadim < /span>
-    )
+class App extends React.Component{
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            myName: props.name
+        };
+    }
+
+    render() {
+        const myName = this.state.myName;
+
+        return (
+            <div>
+                {myName}
+            </div>
+        );
+    };
 }
 
-export default myconst;
+export default App;

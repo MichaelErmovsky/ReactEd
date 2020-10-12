@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Test from './Test.js';
+import Test from './Test';
 
 ReactDOM.render(
-    <Test />,
+    <Test name="Vadim" />,
   document.getElementById('root')
 );
 
