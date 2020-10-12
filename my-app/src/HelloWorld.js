@@ -1,7 +1,13 @@
 import React from 'react';
 
- const Info = () => {
-  return <span>Datsenko Andrey</span>;
-};
+class Info extends React.Component {
+    render() {
+        return (
+            <div>
+                {this.props.name}
+            </div>
+        );
+    };
+}
 
 export default Info;

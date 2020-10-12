@@ -4,8 +4,7 @@ import HelloWorld from './HelloWorld';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HelloWorld />
+    <HelloWorld name='Datsenko Andrey' />
   </React.StrictMode>,
   document.getElementById('root')
 );
-
