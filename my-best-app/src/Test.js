@@ -5,7 +5,7 @@ class App extends React.Component{
         super(props);
 
         this.state = {
-            myName: "Vadim"
+            myName: props.name
         };
     }
 
