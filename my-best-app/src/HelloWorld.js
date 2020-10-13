@@ -1,16 +1,23 @@
 import React from 'react';
+import CustomInput from './CustomInput';
 
 class HelloWorld extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-       name: props.name 
-    };
+  state = {
+    stringArray: ["string1", "string2"]
+  }
+
+  handleChange(newArr){
+    this.setState({stringArray: newArr});
   }
 
   render() {
-    return <span>{this.state.name}</span>
+    return (
+      <React.Fragment> 
+        <p>{JSON.stringify(this.state)}</p>
+        <CustomInput value={this.state.stringArray} onChange={this.handleChange.bind(this)}/>
+      </React.Fragment>
+    );
   }
 }
 
