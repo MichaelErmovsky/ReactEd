@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloWorld from './HelloWorld';
+import Wrapper from './Wrapper';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HelloWorld name='Datsenko Andrey' />
+    <Wrapper />
   </React.StrictMode>,
   document.getElementById('root')
 );
