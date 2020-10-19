@@ -6,8 +6,7 @@ class Info extends React.Component {
         super(props);
 
         this.state = {
-            value: this.props.data,
-            str: 'test'
+            value: this.props.data
         };
         this.handleChange = this.handleChange.bind(this);
     }
