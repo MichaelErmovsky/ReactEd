@@ -4,7 +4,6 @@ class CustomInput extends React.Component {
 
     constructor(props) {
         super(props);
-        console.log(props);
         this.state = {
             value: props.value,
             onChange: props.onChange
@@ -12,7 +11,6 @@ class CustomInput extends React.Component {
     }
 
     static getDerivedStateFromProps(newProps, prevState) {
-        console.log(newProps, prevState);
         if (newProps.value !== prevState.value) {
             return {
                 value: newProps.value
@@ -22,7 +20,6 @@ class CustomInput extends React.Component {
     }
 
     handleInputChange(event){
-        console.log(event.target.value);
         let newArr = event.target.value.split(', ');
         this.state.onChange(newArr);
     }
