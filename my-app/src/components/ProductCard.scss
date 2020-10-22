@@ -1,0 +1,30 @@
+.card{
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 20px;
+  background: #eee;
+  font: 16px/18px Arial, Helvetica, sans-serif;
+  color: #000;
+
+  &__img{
+    margin: 0 0 15px;
+  }
+
+  img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+  }
+
+  &__description{
+    display: block;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0 0 10px;
+  }
+
+  &__row{
+    display: flex;
+    justify-content: space-between;
+  }
+}
