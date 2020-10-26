@@ -1,0 +1,48 @@
+.product-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-item{
+    border: 1px solid #000;
+    padding: .5rem;
+    width: 100%;
+    max-width: 25%;
+    flex: 1 1 25%;
+
+    &--img-holder{
+        overflow: hidden;
+        padding: 0 0 .5rem;
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        display: block;
+    }
+
+    &--description{
+        padding: 0 0 .5rem;
+    }
+
+    &--id{
+        color: #aaa;
+        padding: 0 0 .5rem;
+    }
+
+    &--price-line{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    &--price{
+        font-weight: bold;
+    }
+
+    &--discount{
+        font-weight: normal;
+        color: #f00;
+    }
+}
