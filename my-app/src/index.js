@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Wrapper from './Wrapper';
+import Page from './Page';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Wrapper />
-  </React.StrictMode>,
+  <Page/>,
   document.getElementById('root')
 );
