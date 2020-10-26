@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ProductCard from './Components/ProductCard';
+import Page from './Pages/Page';
 
 ReactDOM.render(
-    <ProductCard />,
+    <Page />,
   document.getElementById('root')
 );
