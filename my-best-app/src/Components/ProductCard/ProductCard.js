@@ -12,10 +12,10 @@ class ProductCard extends React.Component {
                     <div className="product-item--content">
                     <div className="product-item--title"></div>
                         <div className="product-item--description">{this.props.description}</div>
-                        
+                        <div className="product-item--id">Product id: {this.props.id}</div>
                         <div className="product-item--price-line">                            
-                            <div className="product-item--id">Product id: {this.props.id}</div>
-                            <div className="product-item--price">{this.props.price} <span className="product-item--discount">{this.props.discount}</span></div>                            
+                            <span className="product-item--discount">{this.props.discount}</span>
+                            <div className="product-item--price">{this.props.price} </div>
                         </div>
                     </div>
                 </div>
