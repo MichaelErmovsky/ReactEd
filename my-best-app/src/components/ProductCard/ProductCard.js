@@ -7,7 +7,7 @@ class ProductCard extends React.Component {
         return (
             <div className="card" id={this.props.id}>
                 <div className="card-img">
-                    <img src={this.props.imageURL} alt="Card image" />
+                    <img src={this.props.imageURL} alt="" />
                 </div>
                 <strong className="card-description">{this.props.description}</strong>
                 <div className="card-bottom-area">
