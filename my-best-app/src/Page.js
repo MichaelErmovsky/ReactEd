@@ -1,5 +1,6 @@
 import React from 'react';
-import ProductList from './components/ProductList'
+import ProductList from './components/ProductList';
+import CreateProductCard from './components/CreateProductCard';
 
 class Page extends React.Component {
     state = {
@@ -43,9 +44,20 @@ class Page extends React.Component {
         ]
     };
 
+    handleProductCreate(product){
+        const {products} = this.state;
+        products.push(product);
+        this.setState({
+            products: products
+        })
+    }
+
     render () {
         return (
-            <ProductList products={this.state.products}/>
+            <>
+                <ProductList products={this.state.products}/>
+                <CreateProductCard onProductCreate={this.handleProductCreate.bind(this)}/>
+            </>
         );
     }
 }
