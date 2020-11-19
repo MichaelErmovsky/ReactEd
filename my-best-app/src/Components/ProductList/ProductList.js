@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductCard from '../ProductCard';
+import CreateProductCard from '../CreateProductCard';
 import "./ProductList.scss";
 
 class ProductList extends React.Component {
@@ -23,6 +24,7 @@ class ProductList extends React.Component {
         return (
             <div className="product-item--list">
                 {productsItem}
+                <CreateProductCard handleProductAdd={this.props.handleProductAdd}/>
             </div>
         );
     }

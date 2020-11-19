@@ -42,7 +42,7 @@ class Product extends React.Component{
                 imageURL: 'https://dummyimage.com/300x300/000/000000.jpg', 
             },
             {
-                id: '00000',
+                id: '00004',
                 name: 'Test product 05',
                 description: 'Lorem ipsum dolor si amet Lorem ipsum dolor si amet Lorem ipsum dolor si amet Lorem ipsum dolor si amet Lorem ipsum dolor si amet Lorem ipsum dolor si amet ',
                 discount: '11%',
@@ -51,23 +51,20 @@ class Product extends React.Component{
                 imageURL: 'https://dummyimage.com/300x300/000/000000.jpg', 
             },
         ],
-        product : {
-            id: '00000',
-            name: 'Test product 01',
-            description: 'Lorem ipsum dolor si amet Lorem ipsum dolor si amet Lorem ipsum dolor si amet Lorem ipsum dolor si amet Lorem ipsum dolor si amet Lorem ipsum dolor si amet ',
-            discount: '15%',
-            quantity: '11',
-            price: '99.99$',
-            imageURL: 'https://dummyimage.com/300x300/000/000000.jpg',
-        },
+    }
+
+    addProduct(newProduct){
+        const {products} = this.state;
+        products.push(newProduct);
+        this.setState({
+            products: products
+        })
     }
 
     render (){
-        const product = this.state.product;
-
         return (
             <div className="product-container">
-                <ProductList products={this.state.products}/>
+                <ProductList products={this.state.products} handleProductAdd={this.addProduct.bind(this)}/>
             </div>            
         )        
     }
