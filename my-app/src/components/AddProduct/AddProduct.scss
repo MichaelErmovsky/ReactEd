@@ -1,5 +1,6 @@
 .add-product{
   flex: 0 0 32%;
+  max-width: 32%;
   padding: 20px;
   background: #eee;
   font: 16px/18px Arial, Helvetica, sans-serif;
@@ -11,10 +12,36 @@
     margin: 0 0 15px;
   }
 
+  &__error{
+    color: #f00;
+    font-size: 12px;
+    display: none;
+  }
+
   &__row{
     padding: 0 0 10px;
     display: flex;
     flex-direction: column;
+
+    &.error{
+      input{
+        border-color: #f00;
+      }
+
+      .add-product__error{
+        display: block;
+      }
+    }
+
+    input{
+      border: 1px solid #ddd;
+      padding: 4px 6px;
+      margin: 0;
+      font: 14px/20px Arial, Helvetica, sans-serif;
+      color: #000;
+      background: #fff;
+      border-radius: 6px;
+    }
   }
 
   &__label{
