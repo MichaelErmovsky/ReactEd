@@ -52,10 +52,20 @@ class Page extends React.Component {
         })
     }
 
+    handleProductDelete(productId){
+        const {products} = this.state;
+        const test = products.filter((product)=>{
+            return product.id !== productId;
+        })
+        this.setState({
+            products: test
+        })
+    }
+
     render () {
         return (
             <>
-                <ProductList products={this.state.products}/>
+                <ProductList products={this.state.products} deleteProduct={this.handleProductDelete.bind(this)}/>
                 <CreateProductCard onProductCreate={this.handleProductCreate.bind(this)}/>
             </>
         );
