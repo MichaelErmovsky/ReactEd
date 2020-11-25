@@ -6,10 +6,13 @@ class ProductCard extends React.Component{
 
   render (){
     return (
-      <div className="card">
+      <div className="card" data-id={this.props.id}>
         <div className="card__img">
           <img src={this.props.imgSrc} alt="image description"/>
         </div>
+        <h2 className="card__title">
+          {this.props.name}
+        </h2>
         <strong className="card__description">
           {this.props.description}
         </strong>

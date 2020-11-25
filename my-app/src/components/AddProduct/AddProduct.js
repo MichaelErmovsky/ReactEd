@@ -8,18 +8,19 @@ class AddProduct extends React.Component{
     description: '',
     discount: '',
     quantity: '',
-    price: ''
+    price: '',
+    imageSrc: ''
   };
 
-  handleClear(event){
-    event.preventDefault();
+  handleClear(){
     this.setState ({
       id: '',
       name: '',
       description: '',
       discount: '',
       quantity: '',
-      price: ''
+      price: '',
+      imageSrc: ''
     });
   }
 
@@ -27,6 +28,19 @@ class AddProduct extends React.Component{
     this.setState({
       [event.target.id]: event.target.value
     });
+
+    const elements = Object.keys(this.state);
+
+    for(let i = 0; i < elements.length; i++){
+      const element = document.getElementById(elements[i]);
+      if(element && element){
+        const parent = element.closest('.add-product__row');
+
+        if(parent.classList.contains("error")){
+          parent.classList.remove("error");
+        }
+      }
+    }
   }
   
   handleSubmit() {
@@ -51,14 +65,18 @@ class AddProduct extends React.Component{
       parent.className += ' error';
     }
 
-    this.setState({
-      id: Math.floor(Math.random() * (999999 - 1) + 999999),
-      name: this.state.name,
-      description: this.state.description,
-      discount: this.state.discount,
-      quantity: this.state.quantity,
-      price: this.state.price
-    });
+    if(this.state.name && this.state.description && this.state.quantity && this.state.price){
+      
+      this.props.handleProductAdd({
+        id: Math.floor(Math.random() * (999999 - 1) + 999999),
+        name: this.state.name,
+        description: this.state.description,
+        discount: this.state.discount,
+        quantity: this.state.quantity,
+        price: this.state.price,
+        imageSrc: 'https://cdn.statically.io/img/static.web.id/dog.jpg'
+      });
+    }
   }
 
   render (){
@@ -94,9 +112,9 @@ class AddProduct extends React.Component{
           <button className="add-product__btn" onClick={this.handleSubmit.bind(this)}>Create</button>
           <button className="add-product__btn danger" onClick={this.handleClear.bind(this)}>Clear</button>
         </div>
-        {<div>
+        {/* <div>
             {JSON.stringify(this.state)}
-          </div>}
+          </div> */}
       </div>
     );
   }

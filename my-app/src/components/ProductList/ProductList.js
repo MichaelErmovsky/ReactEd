@@ -11,6 +11,7 @@ class ProductList extends React.Component{
         <ProductCard 
         key={product.id}
         imgSrc = {product.imageSrc}
+        name = {product.name}
         description = {product.description}
         discount = {product.discount}
         price = {product.price}
@@ -21,7 +22,7 @@ class ProductList extends React.Component{
     return (
       <div className="catalog">
         {productItems}
-        <AddProduct />
+        <AddProduct handleProductAdd={this.props.handleProductAdd}/>
       </div>
     );
   }
