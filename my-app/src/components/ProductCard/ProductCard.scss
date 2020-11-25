@@ -1,0 +1,40 @@
+.card{
+  flex: 0 0 24%;
+  max-width: 24%;
+  padding: 20px;
+  background: #eee;
+  font: 16px/18px Arial, Helvetica, sans-serif;
+  color: #000;
+  margin: 0 0.5% 20px;
+
+  &__img{
+    margin: 0 0 15px;
+  }
+
+  img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+  }
+
+  &__title{
+    display: block;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0 0 10px;
+    color: green;
+    text-transform: uppercase;
+  }
+
+  &__description{
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 10px;
+  }
+
+  &__row{
+    display: flex;
+    justify-content: space-between;
+  }
+}
