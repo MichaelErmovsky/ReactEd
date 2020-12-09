@@ -1,5 +1,6 @@
 import React from 'react';
-import ProductList from './components/ProductList'
+import ProductList from './components/ProductList';
+import CreateProductCard from './components/CreateProductCard';
 
 class Page extends React.Component {
     state = {
@@ -43,9 +44,30 @@ class Page extends React.Component {
         ]
     };
 
+    handleProductCreate(product){
+        const {products} = this.state;
+        products.push(product);
+        this.setState({
+            products: products
+        })
+    }
+
+    handleProductDelete(productId){
+        const {products} = this.state;
+        const test = products.filter((product)=>{
+            return product.id !== productId;
+        })
+        this.setState({
+            products: test
+        })
+    }
+
     render () {
         return (
-            <ProductList products={this.state.products}/>
+            <>
+                <ProductList products={this.state.products} deleteProduct={this.handleProductDelete.bind(this)}/>
+                <CreateProductCard onProductCreate={this.handleProductCreate.bind(this)}/>
+            </>
         );
     }
 }

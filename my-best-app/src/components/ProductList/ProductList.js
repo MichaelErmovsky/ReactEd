@@ -16,6 +16,7 @@ class ProductList extends React.Component {
                     quantity={product.quantity} 
                     price={product.price}
                     key={product.id}
+                    deleteProduct={this.props.deleteProduct}
                 />
             );
         });

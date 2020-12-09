@@ -14,6 +14,7 @@ class ProductCard extends React.Component {
                     <div className="discount">Discount: {this.props.discount}</div>
                     <div className="price">Price: {this.props.price}</div>
                 </div>
+                <span className="delete-btn" onClick={()=>{this.props.deleteProduct(this.props.id)}}>Delete</span>
             </div>
         );
     }
